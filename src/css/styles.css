@@ -1,0 +1,11 @@
+.card {
+  margin: 2rem 0; }
+  .card .card-header {
+    background-color: #b1dfbb; }
+  .card .card-body {
+    background-color: #c8cbcf;
+    min-width: 200px; }
+  .card ul li {
+    list-style: none; }
+
+/*# sourceMappingURL=styles.css.map */
