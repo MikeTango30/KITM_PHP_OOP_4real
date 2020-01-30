@@ -6,6 +6,8 @@
  * Time: 11:03
  */
 
+namespace OOP;
+
 class Bicycle extends Vehicle
 {
     private $frameType;
@@ -13,6 +15,8 @@ class Bicycle extends Vehicle
     public function __construct($model, $make, $frameType)
     {
         parent::__construct($model, $make);
+        $this->model = $model;
+        $this->make = $make;
         $this->frameType = $frameType;
     }
 
@@ -37,6 +41,7 @@ class Bicycle extends Vehicle
         $data[] = $this->getMake();
         $data[] = $this->getPrice();
         $data[] = $this->getWeight();
+        $data[] = $this->getFrameType();
 
         return $data;
     }

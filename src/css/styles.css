@@ -5,7 +5,8 @@
   .card .card-body {
     background-color: #c8cbcf;
     min-width: 200px; }
-  .card ul li {
-    list-style: none; }
+
+ul li {
+  list-style: none; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -2,22 +2,22 @@
 require "vendor/autoload.php";
 
 use OOP\Teacher;
+use OOP\Printer;
 
 
-$user = new Teacher("Jackson", "jack@son.com", "+55 555 55 555");
-$user2 = new Teacher("Crystal", "crystal@method.com", "+66 666 66 666");
+$teacher = new Teacher("Jackson", "jack@son.com", "+55 555 55 555", "Mathematician");
+$teacher2 = new Teacher("Crystal", "crystal@method.com", "+66 666 66 666", "Art Teacher");
 
-$userComment = "Jackson is an outstanding guy, who likes cats";
-$userComment2 = "Crystal has new bag";
+$teacherComment = "Jackson sure can calculate";
+$teacherComment2 = "Crystal has new bag";
 
-$user->addComment($userComment);
-$user2->addComment($userComment2);
+$teacher->addComment($teacherComment);
+$teacher2->addComment($teacherComment2);
 
-$data = $user->show();
-$user2Data = $user2->show();
-
-
+$teacherData = $teacher->show();
+$teacher2Data = $teacher2->show();
 ?>
+
 <!doctype html>
 <html lang="lt">
 <head>
@@ -41,7 +41,7 @@ $user2Data = $user2->show();
         </div>
         <div class="card-body">
           <ul>
-              <?php foreach ($data as $datum): ?>
+              <?php foreach ($teacherData as $datum): ?>
                 <li><?= $datum; ?></li>
               <?php endforeach; ?>
           </ul>
@@ -55,7 +55,7 @@ $user2Data = $user2->show();
         </div>
         <div class="card-body">
           <ul>
-              <?php foreach ($user2Data as $datum): ?>
+              <?php foreach ($teacher2Data as $datum): ?>
                 <li><?= $datum; ?></li>
               <?php endforeach; ?>
           </ul>

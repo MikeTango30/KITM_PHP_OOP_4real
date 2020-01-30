@@ -6,6 +6,8 @@
  * Time: 10:18
  */
 
+namespace OOP;
+
 class Vehicle
 {
     protected $model;
@@ -185,52 +187,3 @@ class Vehicle
     }
 
 }
-
-$vehicle = new Vehicle("Dodge", "Charger");
-$vehicle->setPrice("20 000 USD");
-$vehicle->setWeight("3 Tons");
-$vehicle->setHasEngine(True);
-$vehicle->setEnginePower("5000 CC");
-$vehicle->setMaxSpeed("300 MPH");
-$vehicle->setDescription("Very powerful muscle car");
-$vehicle->setPassengerCount("5");
-
-$vehicleData = $vehicle->showData();
-
-?>
-
-
-<!doctype html>
-<html lang="lt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <!-- Bootstrap core CSS -->
-  <link href="../src/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="../src/css/styles.css" rel="stylesheet">
-</head>
-<body>
-<div class="container-fluid">
-  <div class="container">
-    <div class="row">
-      <div class="card">
-        <div class="card-header">
-          <h4><?= $vehicle->getModel() . " " . $vehicle->getMake() ?></h4>
-        </div>
-        <div class="card-body">
-          <ul>
-              <?php foreach ($vehicleData as $datum): ?>
-                <li><?= $datum; ?></li>
-              <?php endforeach; ?>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</body>
-</html>

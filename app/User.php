@@ -9,10 +9,10 @@ namespace OOP;
 
 class User
 {
-    private $name;
-    private $email;
-    private $phone;
-    private $comment;
+    protected $name;
+    protected $email;
+    protected $phone;
+    protected $comment;
 
     public function __construct(string $name, string $email, string $phone)
     {
@@ -27,6 +27,7 @@ class User
         $data[] = $this->email;
         $data[] = $this->phone;
         $data[] = $this->comment;
+
         return $data;
     }
 
